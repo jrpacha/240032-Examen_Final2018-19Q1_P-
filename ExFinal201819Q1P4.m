@@ -80,8 +80,8 @@ indCV=indBot';
 [K,Q]=applyConvQuad(indCV,betaBot,TinfBot,K,Q,nodes,elem);
 
 %----------- Essential BC
-u(indLeft)=TLeft;
-u(indRight)=TRight;
+u(indLeft,1)=TLeft;
+u(indRight,1)=TRight;
 
 % Modify F
 %F = F - K(:,fixedNodes)*u(fixedNodes);
