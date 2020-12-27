@@ -92,7 +92,7 @@ Km=K(freeNodes,freeNodes);
 
 %Solve the Reduced System
 um = Km\Im;
-u(freeNodes)=um;
+u(freeNodes,1)=um;
 
 %Post Process: compute Q's:
 Q = Kini*u-Fini;
