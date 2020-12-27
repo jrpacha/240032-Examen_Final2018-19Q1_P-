@@ -84,11 +84,11 @@ u(indLeft)=TLeft;
 u(indRight)=TRight;
 
 % Modify F
-F = F - K(:,fixedNodes)*u(fixedNodes);
+%F = F - K(:,fixedNodes)*u(fixedNodes);
 
 %Reduced system
+Im = F(freeNodes,1) + Q(freeNodes,1) - K(freeNodes,fixedNodes)*u(fixedNodes,1);
 Km=K(freeNodes,freeNodes);
-Im=F(freeNodes)+Q(freeNodes);
 
 %Solve the Reduced System
 um = Km\Im;
