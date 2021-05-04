@@ -33,7 +33,7 @@ indRight=find(nodes(:,1)>4.99);
 
 figure();
 numbering = 0;
-plotElements(nodes, elem, numbering);
+plotElementsOld(nodes, elem, numbering);
 hold on
 
 plot(nodes(indTop,1),nodes(indTop,2),'or','markerFaceColor','r');
